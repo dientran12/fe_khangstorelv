@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+button.slick-next:before {
+    content: "\2771 ";
+  }
+
+button.slick-prev:before {
+    content: "\2770";
+  }
+  
+  /* Định vị và kích thước cho các nút */
+button.slick-prev,
+button.slick-next {
+  height: 40px; 
+  width: 40px; 
+  line-height: 40px; 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+}
+
+button.slick-prev {
+  left: 10px;
+  z-index: 10;
+}
+
+button.slick-next {
+  right: 10px; 
+  z-index: 10;
+} 
+
+button.slick-prev:before,
+button.slick-next:before {
+  font-size: 50px; 
+  color: #34363;
+}
