@@ -63,7 +63,7 @@ const ProductSorter = ({ onSortChange, onSearch, searchTerm }) => {
 
     return (
         <div className='flex justify-between border-b-2 py-0 sm:py-3  border-main'>
-            <div className='flex md:text-xl gap-2 sm:gap-8 my-auto'>
+            <div className='flex md:text-xl gap-2 ml-12 sm:gap-8 my-auto'>
                 {tabs.map((tab) => (
                     <span
                         key={tab.id}

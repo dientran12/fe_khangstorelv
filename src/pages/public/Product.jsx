@@ -31,13 +31,13 @@ const Product = () => {
     try {
 
       const data = await ProductApi.getAllProduct({ search: searchTerm || '', limit: 8, page: page, categoryName, sort });
+      setTotalPages(data.totalPages)
       setTimeout(() => {
         setProducts(data.products);
-        setTotalPages(data.totalPages);
-        setCurrentPage(data.currentPage);
         setTotalProducts(data.totalProducts);
         hideLoading();
       }, 300);
+      return data;
     } catch (error) {
       console.error('Failed to fetch products:', error);
       hideLoading();
@@ -48,8 +48,8 @@ const Product = () => {
   useEffect(() => {
     const category = categories.find(cat => cat.slug === categorySlug);
     const nameCategory = category?.name || '';
-
     let sort = '';
+
     if (sortCriteria === 'New Arrival') {
       sort = 'createdAt';
     } else if (sortCriteria === 'Best Seller') {
@@ -58,25 +58,35 @@ const Product = () => {
       sort = 'stock_desc';
     }
 
-    // Xóa searchTerm mỗi khi categorySlug thay đổi, không phụ thuộc vào giá trị của currentPage
-    if (categorySlug) {
-      setSearchTerm(''); // Xóa searchTerm
-      if (currentPage !== 1) {
-        setCurrentPage(1); // Đặt lại currentPage về 1 nếu không phải trang đầu
-      }
-      fetchProducts(1, nameCategory, sort, ''); // Luôn gọi API với trang đầu và searchTerm rỗng
-    } else {
-      // Gọi fetchProducts với các giá trị hiện tại
-      fetchProducts(currentPage, nameCategory, sort, searchTerm);
+    // Khi categorySlug thay đổi, xóa searchTerm và đặt lại currentPage về 1
+    setSearchTerm(''); // Xóa searchTerm
+    setCurrentPage(1); // Đặt lại currentPage về 1
+    fetchProducts(1, nameCategory, sort, ''); // Luôn gọi API với trang đầu và searchTerm rỗng
+  }, [categorySlug, categories, sortCriteria]);
+
+  // useEffect cho phân trang và tìm kiếm
+  useEffect(() => {
+    const category = categories.find(cat => cat.slug === categorySlug);
+    const nameCategory = category?.name || '';
+    let sort = '';
+
+    if (sortCriteria === 'New Arrival') {
+      sort = 'createdAt';
+    } else if (sortCriteria === 'Best Seller') {
+      sort = 'sold_desc';
+    } else if (sortCriteria === 'Most Popular') {
+      sort = 'stock_desc';
     }
-  }, [categorySlug, currentPage, categories, sortCriteria, searchTerm]);
 
+    // Chỉ gọi API khi thay đổi trang hoặc searchTerm trong cùng một category
+    fetchProducts(currentPage, nameCategory, sort, searchTerm);
 
+  }, [currentPage, searchTerm])
 
-  const handlePageChange = (newPage) => {
+  const handlePageChange = async (newPage) => {
     // Chỉ gọi API khi trang mới khác trang hiện tại
     if (currentPage !== newPage) {
-      fetchProducts(newPage);
+      setCurrentPage(newPage);
     }
   };
 
@@ -89,20 +99,17 @@ const Product = () => {
     setSearchTerm(query);
   };
 
-
   return (
     <DefaultLayout>
 
-      <div className="flex xl:mx-40">
-        <div className='flex-none  flex flex-col   '>
-          <Sidebar />
-        </div>
-        <div className='flex flex-col pl-5  flex-auto '>
+      <div className="relative flex xl:mx-40">
+        <div className="absolute top-0 left-0 sm:static"><Sidebar /></div>
+        <div className='flex flex-col sm:pl-5  flex-auto '>
           <ProductSorter onSortChange={handleSortChange} onSearch={handleSearch} searchTerm={searchTerm} />
           <LoadingWrapper>
-            <div className='grid mb-6  sm:mx-5 grid-cols-1 sm:grid-cols-2 mt-6 gap-4 md:grid-cols-2 lg:grid-cols-3  md:gap-6 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-4 2xl:gap-7.5'>
+            <div className='grid mb-6 mx-5 grid-cols-1 sm:grid-cols-2 mt-6 gap-6 md:grid-cols-2 lg:grid-cols-3  md:gap-6 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-4 2xl:gap-7.5'>
               {products.map(product => (
-                <div key={product.id} >
+                <div key={product.id} className=' w-full'>
                   <CardProduct product={product} />
                 </div>
               ))}

@@ -20,7 +20,7 @@ const OrderItem = ({ dataCartItem }) => {
                     />
                 </div>
                 <div className='flex items-center gap-5'>
-                    <h6 className="text-md  font-medium text-black dark:text-white">
+                    <h6 className="text-md  font-medium text-black dark:text-white  overflow-hidden text-nowrap text-ellipsis max-w-20 sm:max-w-50 xl:max-w-25">
                         {dataCartItem.productName}
                     </h6>
                     <div className="text-sm ">{dataCartItem.style} - {dataCartItem.size} x {dataCartItem.quantity}

@@ -32,7 +32,7 @@ const OrderedItem = ({ dataCartItem, onSelect }) => {
                     className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4 cursor-pointer"
                     onClick={handleItemClick}
                 >
-                    <div className="h-20 w-20 rounded-full flex-none">
+                    <div className="h-15 w-15 sm:h-20 sm:w-20 rounded-full flex-none">
                         <img
                             className='h-full w-full object-cover rounded-md'
                             src={`${process.env.REACT_APP_API_URL_IMAGE}${dataCartItem.items.length > 0 && dataCartItem.items[0].imageUrl}`} alt="ordered item"
@@ -48,18 +48,18 @@ const OrderedItem = ({ dataCartItem, onSelect }) => {
                             {formatDateTime(dataCartItem.createdAt).time}
                         </p>
                     </div>
-                    <div className='grow flex items-center justify-between lg:ml-10 w-full'>
-                        <div className='text-sm'>
+                    <div className='grow gap-2 flex items-center justify-between lg:ml-10 w-full'>
+                        <div className='text-sm '>
                             Method: <span className={`font-bold text-xl`}>{dataCartItem.paymentMethod}</span>
                         </div>
                         <div className='text-sm'>
                             Status: <span className={`${getStatusColor(dataCartItem?.status)} font-bold text-xl capitalize`}>{dataCartItem?.status}</span>
                         </div>
-                        <div className='text-sm'>
+                        <div className='text-sm text-nowrap hidden sm:block'>
                             Total Items: <span className='font-bold text-xl'>{getTotalQuantity(dataCartItem.items)}</span>
                         </div>
                         <div className='flex  text-xl ml-5 items-center '>
-                            <div className='ml-5 text-2xl text-main'> {formatCurrencyVND(dataCartItem.totalAmount)}đ</div>
+                            <div className=' text-2xl text-main'> {formatCurrencyVND(dataCartItem.totalAmount)}đ</div>
                         </div>
                     </div>
                 </div>

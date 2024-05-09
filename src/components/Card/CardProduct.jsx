@@ -20,7 +20,7 @@ const CardProduct = ({ product }) => {
 
     return (
         <>
-            <div className="bg-slate-100 dark:text-boxdark rounded-lg transition shadow-lg duration-300 border-none ease-in-out transform hover:scale-105 hover:shadow-meta-1">
+            <div className="bg-slate-100 max-w-75 mx-auto dark:text-boxdark rounded-lg transition shadow-lg duration-300 border-none ease-in-out transform hover:scale-105 hover:shadow-meta-1">
                 <div className="aspect-w-1 aspect-h-1">
                     <img
                         className="w-full object-cover rounded-t-lg"

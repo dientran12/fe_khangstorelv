@@ -34,26 +34,26 @@ const CartItem = ({ dataCartItem, onToggle, isSelected, onQuantityChange, onRemo
         "bg-slate-100  bg-opacity-[15%]  hover:bg-opacity-100 hover:dark:bg-opacity-100 dark:bg-opacity-30";
 
     return (
-        <div className={`flex relative w-full gap-1 sm:gap-4  self-center border-l-6 rounded-md ${itemClass} border-blackhover:bg-opacity-100 cursor-pointer px-7 py-2 shadow-md dark:bg-[#1B1B24] dark:border-[#ffa70b]  md:p-4  ${isExiting ? 'animate-slideOutLeft' : ''}`}
+        <div className={`flex relative w-full gap-1 sm:gap-4  self-center border-l-6 rounded-md ${itemClass} border-blackhover:bg-opacity-100 cursor-pointer px-2 sm:px-7 py-2 shadow-md dark:bg-[#1B1B24] dark:border-[#ffa70b]  md:p-4  ${isExiting ? 'animate-slideOutLeft' : ''}`}
             onClick={() => onToggle(dataCartItem)}
         >
             <div className="flex-none  mr-3">
                 <img
                     src={`${process.env.REACT_APP_API_URL_IMAGE}${dataCartItem.images && dataCartItem.images[0]}`}
                     alt="product "
-                    className="w-26 h-26 object-cover rounded-md"
+                    className="w-15 h-15  sm:w-26 sm:h-26 object-cover rounded-md"
                     onError={handleImageOnError}
                     onLoad={handleImageOnLoad}
                 />
             </div>
-            <div className="flex flex-row grow ">
+            <div className="flex flex-col sm:flex-row grow ">
                 <div className="self-center basis-1/2">
-                    <h5 className="mb-3 text-lg font-semibold dark:text-[#9D5425]">
+                    <h5 className="mb-3 hidden sm:block text-lg font-semibold dark:text-[#9D5425]">
                         {dataCartItem.productName}
                     </h5>
                     <div className="flex  flex-row gap-4">
-                        <div className="leading-relaxed text-lg">
-                            Style: <p className="inline ml-2 text-base text-main">{dataCartItem.style}</p>
+                        <div className="leading-relaxed text-lg overflow-hidden">
+                            Style: <p className="inline ml-2 text-base text-main  ">{dataCartItem.style}</p>
                         </div>
                         <div className="text-lg">
                             Size:
@@ -73,15 +73,15 @@ const CartItem = ({ dataCartItem, onToggle, isSelected, onQuantityChange, onRemo
                 </div>
             </div>
             <div className='self-center flex-none items-center flex gap-3'>
-                <p className="text-lg inline font-semibold dark:text-[#9D5425]">
+                <p className="text-lg hidden sm:inline font-semibold ">
                     {quantity}
                 </p>
-                x
-                <p className="text-lg inline font-semibold dark:text-[#9D5425]">
+                <span className="hidden sm:inline">x</span>
+                <p className="text-lg hidden sm:inline font-semibold dark:text-[#9D5425]">
                     {formatCurrencyVND(dataCartItem.price)}
                 </p>
                 =
-                <p className="text-3xl inline font-semibold text-main">
+                <p className="text-lg sm:text-3xl inline font-semibold text-main">
                     {formatCurrencyVND(dataCartItem.price * quantity)}
                 </p>
             </div>

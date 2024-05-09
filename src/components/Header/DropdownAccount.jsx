@@ -75,14 +75,13 @@ const DropdownAccount = () => {
                         className="flex items-center gap-4"
                     >
                         <img
-                            // src={user.image || imageEmpty}
                             src={`${process.env.REACT_APP_API_URL_IMAGE}${user?.image}`}
                             alt="User avatar"
                             className='h-8 w-8 rounded-full'
                             onError={handleImageOnError}
                             onLoad={handleImageOnLoad}
                         />
-                        <span className='font-semibold text-[16px] uppercase'>{user?.name || 'ccc'}</span>
+                        <span className='font-semibold hidden sm:flex uppercase'>{user?.name || 'ccc'}</span>
                     </div>
                 ) : (
                     <Link
@@ -91,7 +90,7 @@ const DropdownAccount = () => {
 
                     >
                         <FaUser />
-                        <span className='font-semibold text-[16px]'>Account</span>
+                        <span className='font-semibold hidden sm:block'>Account</span>
                     </Link>
                 )
                 }
@@ -100,7 +99,7 @@ const DropdownAccount = () => {
                     ref={dropdown}
                     onFocus={() => setDropdownOpen(true)}
                     onBlur={() => setDropdownOpen(false)}
-                    className={`absolute -right-16 mt-11 flex  w-75 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark sm:right-0 sm:w-80 ${dropdownOpen === true ? 'block' : 'hidden'
+                    className={`absolute  mt-11 flex  w-50 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark right-0 sm:w-80 ${dropdownOpen === true ? 'block' : 'hidden'
                         }`}
                 >
                     <ul className="flex flex-col gap-5 border-b border-stroke px-6 py-7.5 dark:border-strokedark">

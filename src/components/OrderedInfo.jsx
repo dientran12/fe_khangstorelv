@@ -74,7 +74,7 @@ const OrderedInfo = ({ order, refreshData }) => {
                             <OrderItem key={index} dataCartItem={item} />
                         ))}
                     </div>
-                    <div className=" pt-2 border-t flex flex-col gap-5.5 sm:flex-row">
+                    <div className=" pt-2 border-t flex flex-col gap-2   sm:gap-5.5 sm:flex-row">
                         <div className="w-full sm:w-1/2">
                             <label className="mb-3 block text-sm font-medium text-black dark:text-white">Pay method:<p className="inline ml-4 mr-2 text-xl font-semibold ">{formatCurrencyVND(order.paymentMethod)}</p> </label>
                         </div>

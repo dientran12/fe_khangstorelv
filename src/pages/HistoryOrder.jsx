@@ -33,7 +33,6 @@ const HistoryOrder = () => {
         }
     }, [userState.id]);  // Theo dõi sự thay đổi của userState.id
 
-    console.log("order at hist to ", orders)
     return (
         <DefaultLayout  >
             {orders.length > 0 ? <div className={`grid grid-cols-12 gap-4 md:gap-6 2xl:mt-7.5 2xl:gap-7.5 3xl:mx-40 xl:mx-5`}>
@@ -41,13 +40,13 @@ const HistoryOrder = () => {
                     <h1 className="text-3xl px-4 md:px-6 xl:px-9 font-semibold text-black border-b-2 border-main dark:border-[#ffa70b] dark:text-white py-5">
                         All Orders
                     </h1>
-                    <div className="rounded-sm bg-white p-4 shadow-default dark:bg-boxdark md:p-6 xl:p-9">
+                    <div className="rounded-sm bg-white p-4 shadow-default dark:bg-boxdark md:p-6 xl:p-9 h-80 overflow-y-auto">
                         {orders.map((order, index) => (
                             <OrderedItem key={index} dataCartItem={order} onSelect={() => setSelectedOrder(order)} />
                         ))}
                     </div>
                 </div>
-                <div className={`col-span-12 xl:col-span-5 order-1 xl:order-2`}>
+                <div className={`col-span-12 xl:col-span-5 order-1 xl:order-2 `}>
                     <OrderedInfo order={selectedOrder} refreshData={() => getAllOrdered()} />
                 </div>
             </div>

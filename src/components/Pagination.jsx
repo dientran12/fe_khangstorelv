@@ -25,15 +25,15 @@ export default function Pagination({ currentPage, totalPages, totalProducts, onP
     };
 
     return (
-        <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
-            <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-                <div>
+        <div className="flex items-center justify-between border-t border-gray-200  px-4 py-3 sm:px-6">
+            <div className="flex flex-1 sm:items-center sm:justify-between">
+                <div className="hidden sm:flex ">
                     <p className="text-md text-gray-700">
                         Showing page <span className="font-medium">{currentPage}</span> to <span className="font-medium">{totalPages} </span> pages of {' '}
                         <span className="font-medium">{totalProducts}</span> products
                     </p>
                 </div>
-                <div>
+                <div className="ml-auto">
                     <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                         <div
                             className={`relative inline-flex items-center rounded-l-md cursor-pointer px-2 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : ''}`}
