@@ -109,7 +109,7 @@ const SignUp = () => {
             }, 1000); // Độ trễ là 1000ms hay 1 giây
         } catch (error) {
             console.error('Error:', error);
-            showErrorToast(error.response.data.message || "An error occurred. Please try again.");
+            showErrorToast(error?.response?.data?.message || "An error occurred. Please try again.");
         } finally {
             hideLoading();
         }
