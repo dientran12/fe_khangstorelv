@@ -13,8 +13,12 @@ export const Logout = async () => {
 }
 
 export const Register = async (data) => {
-    const res = await apiClient.post('/user/sign-up', data);
-    return res.data;
+    try {
+        const res = await apiClient.post('/user/sign-up', data);
+        return res.data;
+    } catch (error) {
+        throw error;
+    }
 }
 
 export const UpdateProfile = async (id, data) => {
