@@ -118,7 +118,7 @@ const SignUp = () => {
     return (
         <div className="flex items-center justify-center min-h-screen bg-color1 dark:bg-dark">
             <LoadingFullScreen />
-            <div className="w-full sm:max-w-[600px] rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+            <div className="w-full sm:max-w-[600px] rounded-sm border mx-2 border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
                 <div className="w-full p-4 sm:p-12.5">
                     <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
                         Sign Up

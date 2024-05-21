@@ -18,7 +18,7 @@ const ProductImageSlider = ({ images = [] }) => {
     return (
         <Slider {...settings}>
             {images.map((image, index) => (
-                <div key={index}>
+                <div key={index} className="">
                     <img
                         src={`${process.env.REACT_APP_API_URL_IMAGE}${image}`}
                         alt={`Product`}

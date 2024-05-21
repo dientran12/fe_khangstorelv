@@ -76,13 +76,13 @@ const ProductSorter = ({ onSortChange, onSearch, searchTerm }) => {
             </div>
             <div className='flex h-fit relative' ref={searchRef}>
                 <button
-                    className="sm:hidden px-3 py-3 text-black  rounded  hover:bg-main hover:text-white focus:shadow-outline focus:outline-none"
+                    className={`sm:hidden px-3 py-3 text-black  rounded ${!showSearchInput && " hover:bg-main hover:text-white"} focus:shadow-outline focus:outline-none`}
                     onClick={handleSearchIconClick}
                 >
                     <FaSearch />
                 </button>
                 <div
-                    className={showSearchInput ? `absolute top-0 right-0 flex w-50` : "hidden sm:flex"}
+                    className={showSearchInput ? `absolute top-1 sm:top-0 right-0 flex w-50` : "hidden sm:flex"}
                 >
                     <input
                         type="text"

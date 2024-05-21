@@ -40,7 +40,7 @@ const HistoryOrder = () => {
                     <h1 className="text-3xl px-4 md:px-6 xl:px-9 font-semibold text-black border-b-2 border-main dark:border-[#ffa70b] dark:text-white py-5">
                         All Orders
                     </h1>
-                    <div className="rounded-sm bg-white p-4 shadow-default dark:bg-boxdark md:p-6 xl:p-9 h-80 overflow-y-auto">
+                    <div className="rounded-sm bg-white px-0 sm:p-4 shadow-default dark:bg-boxdark md:p-6 xl:p-9 h-80 overflow-y-auto">
                         {orders.map((order, index) => (
                             <OrderedItem key={index} dataCartItem={order} onSelect={() => setSelectedOrder(order)} />
                         ))}

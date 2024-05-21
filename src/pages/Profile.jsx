@@ -104,7 +104,7 @@ const Profile = () => {
                     <img
                         src={`${process.env.REACT_APP_API_URL_IMAGE}${userData?.image}`}
                         alt="profile cover"
-                        className="h-full w-full rounded-tl-sm  rounded-tr-sm object-cover object-center"
+                        className="h-full w-full rounded-tl-sm  rounded-tr-sm object-cover object-center shine"
                         onError={handleImageOnError}
                         onLoad={handleImageOnLoad}
                     />

@@ -11,7 +11,7 @@ import DropdownAccount from './DropdownAccount';
 const Header = () => {
 
     return (
-        <div className=" w-full  bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none sticky top-0 z-999 ">
+        <div className="w-full  bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none sticky top-0 z-999 ">
             <div className="flex mx-1 sm:mx-5 items-center  h-[110px] justify-between py-[35px] xl:mx-40">
                 <Link to={`/${path.HOME}`}><img src={logo} alt="logo" className="w-50 object-contain" /></Link>
                 <div className="flex sm:gap-5">

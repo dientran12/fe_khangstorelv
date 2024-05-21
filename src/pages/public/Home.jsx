@@ -123,70 +123,66 @@ const Home = () => {
         <h2 className="text-3xl mb-5 text-center hover:text-red-500 cursor-pointer duration-150 hover:font-bold">New Arrival</h2>
         <div className='px-4 sm:px-40 hover:text-xl duration-500 hover:text-blue-700'>Discover our latest collection where fashion meets creativity! Each design in the New Products section is carefully curated to bring confidence and unique character. Don't miss the opportunity to be the first to wear trendsetting styles.</div>
       </div>
-      <div className='grid grid-cols-12 '>
-        <div className='col-span-4 grid grid-cols-12 '>
-          {newArrival.slice(0, 4).map((product) => (
-            <div key={product.id} className="overflow-hidden aspect-w-1 aspect-h-1 col-span-6">
+      <div className='grid grid-cols-12  '>
+        <div className='col-span-12 sm:col-span-4 order-2 sm:order-1 gap-2 sm:gap-0 m-2 sm:m-0 grid grid-cols-12 '>
+          {newArrival.slice(0, 4).map((product, index) => (
+            <div key={product.id} className={`overflow-hidden aspect-w-1 ${index === 3 && 'hidden'} sm:block aspect-h-1 col-span-4 sm:col-span-6`}>
               <ProductImageSlider images={product.images} />
             </div>
           ))}
         </div>
-        <div className='col-span-8'>
+        <div className='col-span-12 order-1  sm:order-2 sm:col-span-8'>
           <img
             src={slideHome1}
             alt="Mô tả Ảnh 1"
-            className="w-full object-cover "
-            style={{ height: 'desired-height' }}
+            className="w-full object-cover shine"
           />
         </div>
       </div>
-      <div className="text-center xl:mx-40 mb-10 mt-30"
+      <div className="text-center xl:mx-40 mb-10 mt-10 sm:mt-30"
         onClick={() => navigateToProductsWithSort('Best Seller')}
       >
         <h2 className="text-3xl mb-5 text-center hover:text-red-500 cursor-pointer duration-150 hover:font-bold">Best Seller</h2>
         <div className='px-4 sm:px-40 hover:text-xl duration-500 hover:text-blue-700'>Stand out with sophisticated and stylish designs from the Featured Products section. Each item exudes uniqueness and exceptional quality, helping you shine with your distinctive taste and make a lasting impression anywhere.</div>
       </div>
-      <div className='grid grid-cols-12 '>
-        <div className='col-span-4 grid grid-cols-12 '>
-          {bestArrival.slice(0, 4).map((product) => (
-            <div key={product.id} className="overflow-hidden aspect-w-1 aspect-h-1 col-span-6">
+      <div className='grid grid-cols-12  '>
+        <div className='col-span-12 sm:col-span-4 order-2 sm:order-1 gap-2 sm:gap-0 m-2 sm:m-0 grid grid-cols-12 '>
+          {bestArrival.slice(0, 4).map((product, index) => (
+            <div key={product.id} className={`overflow-hidden aspect-w-1 ${index === 3 && 'hidden'} sm:block aspect-h-1 col-span-4 sm:col-span-6`}>
               <ProductImageSlider images={product.images} />
             </div>
           ))}
         </div>
-        <div className='col-span-8'>
+        <div className='col-span-12 order-1  sm:order-2 sm:col-span-8'>
           <img
             src={slideHome2}
             alt="Mô tả Ảnh 1"
             className="w-full object-cover "
-            style={{ height: 'desired-height' }}
           />
         </div>
       </div>
-      <div className="text-center xl:mx-40 mb-10 mt-30"
+      <div className="text-center xl:mx-40 mb-10 mt-10 sm:mt-30"
         onClick={() => navigateToProductsWithSort('Most Popular')}
       >
         <h2 className="text-3xl mb-5 text-center hover:text-red-500 cursor-pointer duration-150 hover:font-bold">Most Popular</h2>
         <div className='px-4 sm:px-40 hover:text-xl duration-500 hover:text-blue-700'>Check out the customer favorites in the Popular Products section. Chosen for quality, style, and comfort, these items have won the hearts of thousands. Find the perfect piece to complement your style!</div>
       </div>
-      <div className='grid grid-cols-12 mb-50'>
-        <div className='col-span-4 grid grid-cols-12 '>
-          {mostArrival.slice(0, 4).map((product) => (
-            <div key={product.id} className="overflow-hidden aspect-w-1 aspect-h-1 col-span-6">
+      <div className='grid grid-cols-12  '>
+        <div className='col-span-12 sm:col-span-4 order-2 sm:order-1 gap-2 sm:gap-0 m-2 sm:m-0 grid grid-cols-12 '>
+          {mostArrival.slice(0, 4).map((product, index) => (
+            <div key={product.id} className={`overflow-hidden aspect-w-1   ${index === 3 && 'hidden'} sm:block aspect-h-1 col-span-4 sm:col-span-6 `}>
               <ProductImageSlider images={product.images} />
             </div>
           ))}
         </div>
-        <div className='col-span-8'>
+        <div className='col-span-12 order-1  sm:order-2 sm:col-span-8'>
           <img
             src={slideHome3}
             alt="Mô tả Ảnh 1"
-            className="w-full object-cover "
-            style={{ height: 'desired-height' }}
+            className="w-full object-cover shine"
           />
         </div>
       </div>
-
     </DefaultLayout>
   )
 }

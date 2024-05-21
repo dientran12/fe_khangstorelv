@@ -8,16 +8,14 @@ const DefaultLayout = ({ children }) => {
 
     return (
         <div className="dark:bg-boxdark-2 dark:text-whiten ">
-            <div className=" overflow-hidden">
-                <div className="relative min-h-screen  flex flex-col overflow-y-auto overflow-x-hidden">
+            <div className=" ">
+                <div className="relative min-h-screen flex flex-col ">
                     {/* <!-- ===== Header Start ===== --> */}
                     <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
                     <Navigation />
                     {/* <!-- ===== Main Content Start ===== --> */}
-                    <main className="flex-grow">
-                        <div className="mt-0.5 mb-10 ">
-                            {children}
-                        </div>
+                    <main className="flex-grow mt-0.5 mb-10 ">
+                        {children}
                     </main>
                     {/* <!-- ===== Main Content End ===== --> */}
                     <Footer />

@@ -53,10 +53,10 @@ const OrderedInfo = ({ order, refreshData }) => {
                 />
             }
             {order && <div className="rounded-md  h-fit duration-300 ease-in-out shadow-default  bg-white  dark:bg-boxdark">
-                <h1 className="text-3xl px-4 md:px-6 text-center xl:px-9 font-semibold text-black border-b-2  dark:text-white py-5">
+                <h1 className="text-3xl p-2 sm:px-4 md:px-6 text-center xl:px-9 font-semibold text-black border-b-2  dark:text-white py-5">
                     Detail order "<p className="inline text-main">{order.id}</p>" on {formatDateTime(order.createdAt).date}
                 </h1>
-                <div className="grid grid-cols-1 gap-2 p-6.5 ">
+                <div className="grid grid-cols-1 gap-2 p-2 sm:p-6.5 ">
                     <div className="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div className="w-full sm:w-1/2">
                             <label className="mb-3 block text-sm font-medium text-black dark:text-white">Total prices:<p className="inline ml-10 mr-2 text-3xl font-semibold text-main">{formatCurrencyVND(order.totalAmount)}</p> vnđ</label>
