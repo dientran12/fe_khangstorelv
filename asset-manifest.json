@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dientran12/fe_khangstorelv.git/static/css/main.fc299342.css",
+    "main.js": "/dientran12/fe_khangstorelv.git/static/js/main.faa8ae34.js",
+    "static/media/QC_SanPhamMoi.png": "/dientran12/fe_khangstorelv.git/static/media/QC_SanPhamMoi.c4383cf5536942adc9c1.png",
+    "static/media/QC_BANCHAYNHAT.png": "/dientran12/fe_khangstorelv.git/static/media/QC_BANCHAYNHAT.6aabe6adf19f3c864e4e.png",
+    "static/media/QC_GIAMGIA.png": "/dientran12/fe_khangstorelv.git/static/media/QC_GIAMGIA.3d78fe9accb2c7211d4c.png",
+    "static/media/slide_home_sp_popular.jpg": "/dientran12/fe_khangstorelv.git/static/media/slide_home_sp_popular.e01625327a848f40f0f9.jpg",
+    "static/media/slide_home_new_product.jpg": "/dientran12/fe_khangstorelv.git/static/media/slide_home_new_product.437a90706c7761c93feb.jpg",
+    "static/media/slide_home_best-seller1.jpg": "/dientran12/fe_khangstorelv.git/static/media/slide_home_best-seller1.9b02f83225ba60e37c20.jpg",
+    "static/media/logo_main.jpg": "/dientran12/fe_khangstorelv.git/static/media/logo_main.6d7e1ae85f53b6ca3340.jpg",
+    "static/media/NoCartItem.png": "/dientran12/fe_khangstorelv.git/static/media/NoCartItem.2eb6e09aed21c4768d8c.png",
+    "static/media/slick.svg": "/dientran12/fe_khangstorelv.git/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/dientran12/fe_khangstorelv.git/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/dientran12/fe_khangstorelv.git/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/dientran12/fe_khangstorelv.git/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/dientran12/fe_khangstorelv.git/index.html",
+    "main.fc299342.css.map": "/dientran12/fe_khangstorelv.git/static/css/main.fc299342.css.map",
+    "main.faa8ae34.js.map": "/dientran12/fe_khangstorelv.git/static/js/main.faa8ae34.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc299342.css",
+    "static/js/main.faa8ae34.js"
+  ]
+}
