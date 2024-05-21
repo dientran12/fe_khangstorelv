@@ -1,4 +1,5 @@
-const { addBabelPlugin, override } = require('customize-cra');
+const { override, addBabelPlugin, addWebpackAlias } = require('customize-cra');
+const path = require('path');
 
 module.exports = override(
     addBabelPlugin([
@@ -7,5 +8,8 @@ module.exports = override(
             rootPathPrefix: '~',
             rootPathSuffix: 'src',
         },
-    ])
+    ]),
+    addWebpackAlias({
+        ['~']: path.resolve(__dirname, 'src')
+    })
 );
