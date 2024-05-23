@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom"
+import { HashRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import path from "./ultils/path";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCategories } from '~/redux/slides/categorySlide.js';
@@ -59,25 +59,26 @@ function App() {
 
   return (
 
-    <div className="min-h-screen  font-main">
-      <Elements stripe={stripePromise}>
-        <Routes>
-          <Route path={path.HOME} element={<Home />} />
-          <Route path="/product/:categorySlug" element={<Product />} />
-          <Route path="/product" element={<Navigate replace to="/product/all" />} />
-          <Route path="/product/all" element={<Product />} />
-          <Route path="/detail/:productId" element={<DetailProduct />} />
-          <Route path="/cart" element={<CartPage isTokenReady={isTokenReady} />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/order" element={<OrderPage />} />
-          <Route path="/history-orders" element={<HistoryOrder />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<SignUp />} />
-          <Route path="/checkout" element={<PaymentPage />} />
-
-        </Routes>
-      </Elements>
-    </div>
+    <Router>
+      <div className="min-h-screen  font-main">
+        <Elements stripe={stripePromise}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:categorySlug" element={<Product />} />
+            <Route path="/product" element={<Navigate replace to="/product/all" />} />
+            <Route path="/product/all" element={<Product />} />
+            <Route path="/detail/:productId" element={<DetailProduct />} />
+            <Route path="/cart" element={<CartPage isTokenReady={isTokenReady} />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/order" element={<OrderPage />} />
+            <Route path="/history-orders" element={<HistoryOrder />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="/checkout" element={<PaymentPage />} />
+          </Routes>
+        </Elements>
+      </div>
+    </Router>
   );
 }
 

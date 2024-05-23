@@ -10,13 +10,13 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router>
+  <>
     <Provider store={store}>
       <LoadingProvider>
         <App />
       </LoadingProvider>
     </Provider>
     <ToastContainer />
-  </Router>
+  </>
 );
 
