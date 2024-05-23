@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e5eefbf.css",
-    "main.js": "/static/js/main.c523b237.js",
-    "static/media/QC_SanPhamMoi.png": "/static/media/QC_SanPhamMoi.c4383cf5536942adc9c1.png",
-    "static/media/QC_BANCHAYNHAT.png": "/static/media/QC_BANCHAYNHAT.6aabe6adf19f3c864e4e.png",
-    "static/media/QC_GIAMGIA.png": "/static/media/QC_GIAMGIA.3d78fe9accb2c7211d4c.png",
-    "static/media/slide_home_sp_popular.jpg": "/static/media/slide_home_sp_popular.e01625327a848f40f0f9.jpg",
-    "static/media/slide_home_new_product.jpg": "/static/media/slide_home_new_product.437a90706c7761c93feb.jpg",
-    "static/media/slide_home_best-seller1.jpg": "/static/media/slide_home_best-seller1.9b02f83225ba60e37c20.jpg",
-    "static/media/logo_main.jpg": "/static/media/logo_main.6d7e1ae85f53b6ca3340.jpg",
-    "static/media/NoCartItem.png": "/static/media/NoCartItem.2eb6e09aed21c4768d8c.png",
-    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/index.html",
-    "main.0e5eefbf.css.map": "/static/css/main.0e5eefbf.css.map",
-    "main.c523b237.js.map": "/static/js/main.c523b237.js.map"
+    "main.css": "/fe_khangstorelv/static/css/main.df1bcb93.css",
+    "main.js": "/fe_khangstorelv/static/js/main.13270697.js",
+    "static/media/QC_SanPhamMoi.png": "/fe_khangstorelv/static/media/QC_SanPhamMoi.c4383cf5536942adc9c1.png",
+    "static/media/QC_BANCHAYNHAT.png": "/fe_khangstorelv/static/media/QC_BANCHAYNHAT.6aabe6adf19f3c864e4e.png",
+    "static/media/QC_GIAMGIA.png": "/fe_khangstorelv/static/media/QC_GIAMGIA.3d78fe9accb2c7211d4c.png",
+    "static/media/slide_home_sp_popular.jpg": "/fe_khangstorelv/static/media/slide_home_sp_popular.e01625327a848f40f0f9.jpg",
+    "static/media/slide_home_new_product.jpg": "/fe_khangstorelv/static/media/slide_home_new_product.437a90706c7761c93feb.jpg",
+    "static/media/slide_home_best-seller1.jpg": "/fe_khangstorelv/static/media/slide_home_best-seller1.9b02f83225ba60e37c20.jpg",
+    "static/media/logo_main.jpg": "/fe_khangstorelv/static/media/logo_main.6d7e1ae85f53b6ca3340.jpg",
+    "static/media/NoCartItem.png": "/fe_khangstorelv/static/media/NoCartItem.2eb6e09aed21c4768d8c.png",
+    "static/media/slick.svg": "/fe_khangstorelv/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/fe_khangstorelv/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/fe_khangstorelv/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/fe_khangstorelv/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/fe_khangstorelv/index.html",
+    "main.df1bcb93.css.map": "/fe_khangstorelv/static/css/main.df1bcb93.css.map",
+    "main.13270697.js.map": "/fe_khangstorelv/static/js/main.13270697.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e5eefbf.css",
-    "static/js/main.c523b237.js"
+    "static/css/main.df1bcb93.css",
+    "static/js/main.13270697.js"
   ]
 }
