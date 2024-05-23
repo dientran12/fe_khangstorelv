@@ -2,7 +2,7 @@
   "name": "fe-khangcuteshop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dientran12.github.io/fe_khangstorelv",
+  "homepage": "https://dientran12.github.io/fe_khangstorelv/",
   "dependencies": {
     "@headlessui/react": "^1.7.19",
     "@reduxjs/toolkit": "^2.2.1",
